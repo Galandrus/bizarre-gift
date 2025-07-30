@@ -70,28 +70,28 @@ document.addEventListener('DOMContentLoaded', function () {
 //   FUNCIONES PRINCIPALES
 // =========================
 
-// Consejos de Teatro profundos
+// Consejos de Teatro bizarros
 const theaterAdvice = [
-  'Cuando te olvides la letra, mirá fijo al otro como si el error fuera suyo. Eso es liderazgo escénico.',
-  'Nunca subas al escenario con dudas. Las dudas se notan. Las certezas, aunque sean erradas, son aplausos.',
-  'La escenografía es un estado mental. Si no está, inventala. Si está, ignorala.',
-  'Un buen silencio puede valer más que dos páginas de texto. Pero usalo como puñal, no como escudo.',
-  'Si algo sale mal, no lo disimules. Multiplicalo hasta que sea parte de la estética.',
-  'El vestuario no te tiene que quedar bien. Te tiene que contar un secreto.',
-  'Si te caés, que sea con dignidad y con ritmo. El ridículo es un recurso como cualquier otro.',
-  'Nunca llegues temprano al ensayo. El ensayo empieza cuando empieza la tensión.',
-  'Hay obras que no se entienden. Pero se sienten. Si no se entienden ni se sienten, al menos que molesten.',
-  'Improvisar no es rellenar. Es escribir con el cuerpo lo que el texto todavía no supo decir.',
-  'Una escena es buena si alguien en el fondo de la sala se incomoda un poco.',
-  'La respiración compartida es más fuerte que cualquier parlamento.',
-  'No actués con miedo a hacer papelones. Hacer papelones es parte del oficio.',
-  'Un ensayo sin peleas no es ensayo. Es trámite.',
-  'La mirada al vacío siempre tiene que tener un motivo. Aunque no lo sepas.',
-  'Nunca confíes demasiado en una ovación. Pero tomala igual. Después la devolvés en otra función.',
-  'El personaje no sos vos, pero si no le das algo tuyo, es cartón pintado.',
-  'Cuando no sepas qué hacer, parate firme. La quietud es un arma cargada.',
-  'Si el texto es malo, actuá como si fuera bueno. Si es bueno, actuá como si te lo dictaran los dioses.',
-  'El teatro no se trata de entender. Se trata de insistir.',
+  'Si te olvidás el texto, inventá en otro idioma. Preferentemente muerto.',
+  'Mientras más grites, mejor te van a entender. Especialmente en escenas íntimas.',
+  'Si no sabés qué hacer con las manos: aplaudí. Siempre garpa.',
+  'Romper la cuarta pared significa que podés putear al público. Usalo.',
+  'Nunca leas la obra completa. Que te sorprenda en el estreno.',
+  'Decí tus líneas como si estuvieras por irte al banco. Apurada y sin ganas.',
+  'El vestuario lo elegís vos. Aunque hagas de piedra.',
+  'Improvisar es repetir lo que dijo el otro pero con cara rara.',
+  'Si alguien se equivoca, corregilo en voz alta. Eso es compañerismo.',
+  'Las pausas son para cobardes. Apurate que hay que llegar a tu casa.',
+  'Nunca escuches al otro. Vos ya sabés cómo va la escena.',
+  'Las luces están para distraerte. Si te ciegan, mirá más fuerte.',
+  'La mejor emoción es la que se finge exageradamente.',
+  'Si algo sale mal, echale la culpa al director. Aunque seas vos.',
+  'El personaje sos vos en tu mejor versión. Con más poses.',
+  'Siempre actuá como si fueras la protagonista. Incluso si sos el perchero.',
+  'Si alguien llora en escena, reíte. Hay que balancear la energía.',
+  'No te conectes con el cuerpo. El cuerpo es un trámite.',
+  'La voz no importa, total hay micrófono.',
+  'Si estás nerviosa, comete un caramelo en plena función. Ayuda mucho.',
 ];
 
 // Oráculos teatrales profundos
@@ -144,7 +144,7 @@ const brownieRecipe = {
 function showAdvice() {
   const randomAdvice =
     theaterAdvice[Math.floor(Math.random() * theaterAdvice.length)];
-  showModal('💡 Consejo Teatral Supremo', randomAdvice);
+  showModal('💡 Consejo Teatral Bizarro', randomAdvice);
 }
 
 // Mostrar oráculo
@@ -204,7 +204,7 @@ function showMedusa() {
       <div style="text-align: center;">
         <img src="medusa2.jpg" alt="Medusa Luminosa en el Teatro" style="max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 0 20px rgba(255, 235, 59, 0.3);">
         <p style="font-style: italic; color: #dda0dd; margin-top: 10px;">
-          🌊 La verdadera estrella del teatro: una medusa luminosa que ilumina el escenario con su gracia etérea. 
+          🌊 La verdadera estrella del teatro: una medusa luminosa que ilumina el escenario con su gracia etérea.
           <br>¿Quién necesita actores cuando tienes una criatura marina brillante? 🎭✨
         </p>
       </div>
@@ -215,7 +215,7 @@ function showMedusa() {
       <div style="text-align: center;">
         <img src="zebra.jpg" alt="Cebra Artística en el Teatro" style="max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 0 20px rgba(255, 235, 59, 0.3);">
         <p style="font-style: italic; color: #dda0dd; margin-top: 10px;">
-          🦓 La transformación teatral perfecta: una cebra artística con maquillaje corporal que desafía los límites del escenario. 
+          🦓 La transformación teatral perfecta: una cebra artística con maquillaje corporal que desafía los límites del escenario.
           <br>Rayas que cuentan historias y un tocado que habla de libertad salvaje. 🎭✨
         </p>
       </div>
