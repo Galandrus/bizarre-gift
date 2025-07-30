@@ -1,0 +1,452 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('teatro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #e8e8e8;
+  overflow-x: hidden;
+}
+
+/* Efecto de cortinas laterales */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(90deg, #8b0000, #2f0000);
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+  border-right: 3px solid #ffeb3b;
+}
+
+body::after {
+  right: 0;
+  border-left: 3px solid #ffeb3b;
+}
+
+/* =========================
+   PANTALLA DE LOGIN
+========================= */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.theater-title {
+  font-size: 3.5rem;
+  color: #ffeb3b;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.theater-title:hover {
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 235, 59, 0.8), 3px 3px 6px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 2px solid #8b0000;
+  box-shadow: 0 0 30px rgba(255, 235, 59, 0.3);
+  max-width: 500px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.login-message {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #e8e8e8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.password-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #8b0000;
+  border-radius: 8px;
+  color: #ffeb3b;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+}
+
+.login-btn {
+  background: linear-gradient(45deg, #8b0000, #dc143c);
+  color: #ffeb3b;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #dc143c, #ff6347);
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);
+  transform: translateY(-2px);
+}
+
+.hint {
+  font-style: italic;
+  color: #b8860b;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.dropdown-container {
+  margin-top: 1rem;
+}
+
+.dropdown-label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #dda0dd;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #483d8b;
+  border-radius: 8px;
+  color: #dda0dd;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: #ff4500;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================
+   PÁGINA PRINCIPAL
+========================= */
+.main-content {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  color: #ffeb3b;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- CONTENEDOR DE BOTONES EN 3-2 CENTRADO --- */
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 2rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.buttons-container .theater-btn {
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.buttons-container .theater-btn:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+.buttons-container .theater-btn:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+/* Responsive: en móvil, todos en columna centrados */
+@media (max-width: 768px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  .buttons-container .theater-btn {
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    height: 120px;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.theater-btn {
+  background: linear-gradient(45deg, #2f4f4f, #708090);
+  color: #ffeb3b;
+  border: 3px solid #8b0000;
+  padding: 2.5rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.theater-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 235, 59, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease-in-out;
+}
+
+.theater-btn:hover::before {
+  left: 100%;
+}
+
+.theater-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 235, 59, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theater-btn:hover::after {
+  opacity: 1;
+}
+
+.theater-btn:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 235, 59, 0.5);
+  border-color: #ffeb3b;
+  background: linear-gradient(45deg, #4b0082, #8b008b);
+  letter-spacing: 2px;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.95));
+  margin: auto;
+  padding: 2rem;
+  border: 3px solid #8b0000;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(255, 235, 59, 0.5);
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.close-btn {
+  color: #ffeb3b;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close-btn:hover {
+  color: #ff6347;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #ffeb3b;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.modal-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e8e8e8;
+}
+
+/* Estilos para la barra de scroll del modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b0000, #dc143c);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #dc143c, #ff6347);
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .theater-title {
+    font-size: 2.5rem;
+  }
+
+  .login-container {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .buttons-container {
+    width: 100%;
+    height: 500px;
+    padding: 0 1rem;
+  }
+
+  /* Ajustar posiciones para móviles - S más compacta */
+  .buttons-container .theater-btn:nth-child(1) {
+    top: 10%;
+    left: 30%;
+  }
+
+  .buttons-container .theater-btn:nth-child(2) {
+    top: 30%;
+    left: 70%;
+  }
+
+  .buttons-container .theater-btn:nth-child(3) {
+    top: 50%;
+    left: 30%;
+  }
+
+  .buttons-container .theater-btn:nth-child(4) {
+    top: 70%;
+    left: 70%;
+  }
+
+  .buttons-container .theater-btn:nth-child(5) {
+    top: 90%;
+    left: 30%;
+  }
+
+  .theater-btn {
+    height: 120px;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: auto;
+    padding: 1rem;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

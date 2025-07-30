@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teatro Abandonado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- PANTALLA DE LOGIN -->
+    <div id="loginScreen" class="login-screen">
+      <h1
+        class="theater-title"
+        onclick="bypassPassword()"
+        style="cursor: pointer"
+      >
+        🎭 Teatro Abandonado 🎭
+      </h1>
+
+      <div class="login-container">
+        <div class="login-message">
+          Ingresá la contraseña para entrar al teatro
+        </div>
+
+        <input
+          type="text"
+          id="passwordInput"
+          class="password-input"
+          placeholder="Contraseña del teatro..."
+        />
+
+        <button onclick="checkPassword()" class="login-btn">
+          Entrar al Teatro
+        </button>
+
+        <div class="hint">
+          💡 Pista: Las pasadas de las familias se llaman...
+        </div>
+
+        <div class="dropdown-container">
+          <div class="dropdown-label">Familias de Teatro</div>
+          <select class="dropdown">
+            <option value="">Te das por rendida?</option>
+            <option value="olvida">Para cocinar hay de vainilla</option>
+            <option value="respira">Es lo que esta dentro de une</option>
+            <option value="medialunas">Podes tocar el título je</option>
+          </select>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+      </div>
+    </div>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <div id="mainContent" class="main-content">
+      <h1 class="welcome-title">🎪 Bienvenido al Teatro Secreto 🎪</h1>
+
+      <div class="buttons-container">
+        <button onclick="showAdvice()" class="theater-btn">
+          🎭<br />Consejitos
+        </button>
+
+        <button onclick="showOracle()" class="theater-btn">
+          🔮<br />TeatrOráculo
+        </button>
+
+        <button onclick="showRecipe()" class="theater-btn">
+          🍝<br />Receta de Cocina <br />
+          Secreta
+        </button>
+
+        <button onclick="showMedusa()" class="theater-btn">
+          🌊<br />Espejo teatral
+        </button>
+
+        <button onclick="toggleMusic()" class="theater-btn" id="musicBtn">
+          🎵<br />Los escenarios andan diciendo
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle" class="modal-title"></h2>
+        <p id="modalText" class="modal-text"></p>
+      </div>
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="theaterMusic" loop>
+      <source src="cancion.mp3" type="audio/mpeg" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
