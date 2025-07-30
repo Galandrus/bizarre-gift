@@ -3,15 +3,14 @@
 // =========================
 
 // Contraseña correcta
-const correctPassword = 'esencias';
+const correctPassword = 'esencia';
 
 // Verificar contraseña
 function checkPassword() {
   const inputPassword = document.getElementById('passwordInput').value;
   const errorMessage = document.getElementById('errorMessage');
-  console.log(inputPassword);
-  console.log(inputPassword === correctPassword);
-  if (inputPassword === correctPassword) {
+
+  if (inputPassword.toLowerCase() === correctPassword) {
     // Contraseña correcta - mostrar página principal
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('mainContent').style.display = 'block';
